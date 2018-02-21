@@ -2,4 +2,9 @@ page-slider {
     .swiper-pagination-bullet-active {
         background: white;
     }
+
+    // Remove Scrollbar in Sliders
+    ::-webkit-scrollbar{
+        display:none;
+        }
 }
