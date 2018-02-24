@@ -95,7 +95,20 @@ page-slider {
     }
 
     // Get Started Button
-    .getStartedButton {
+    // .getStartedButton {
+    //     background:none;
+    //     font-size: 18px;
+    //     border-style: solid;
+    //     border-width: 2px;
+    //     border-color:white;
+    //     color: white;
+    //     position: absolute;
+    //     bottom:2.5%;
+    //     left:33%;
+        
+    // }
+
+    .getStartedButton{
         background:none;
         font-size: 18px;
         border-style: solid;
@@ -103,8 +116,10 @@ page-slider {
         border-color:white;
         color: white;
         position: absolute;
-        bottom:2.5%;
-        left:33%;
-        
+        left: 50%;
+        width: 100px;
+        margin-left: -50px;
+        bottom:2%;
+    
     }
 }
