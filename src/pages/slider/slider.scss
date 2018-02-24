@@ -1,3 +1,110 @@
 page-slider {
+    // Text Colour
+    .textColor {
+        color: white;
+        font-family: roboto-regular;
+    }
 
+    // Header
+    .boxHeader {
+        height: 60px;
+        margin-top: 70px;
+    }
+
+    // Paragraph
+    .boxPara {
+        font-size: 23px;
+        width: 291px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.6;
+    }
+
+    // Picture's size
+    ion-img {
+        height: 209px;
+        width: 224px;
+    }
+
+    // Slider's 1st Picture Display
+    .slider1Display {
+        background-color: #4E7AC7;
+    }
+
+    // Slider's 2nd Picture Display
+    .slider2Display {
+        background-color: #35478C;
+    }
+
+    // Slider's 3nd Picture Display
+    .slider3Display {
+        background-color: #292975;
+    }
+
+    // Pager Bullet
+    div.swiper-pagination { 
+        top: 87%; 
+        position: absolute;
+
+        // Non-active bullet
+        .swiper-pagination-bullet {
+            background: white !important;
+            opacity: 1;
+        }
+        
+        // Active bullet
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #B5AAAA !important;
+          }
+    }
+
+    // White Line
+    .whiteLine {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: white #4E7AC7 #4E7AC7 #4E7AC7;
+    }
+
+    // Skip Button
+    .skipButton {
+        background:none;
+        border:none;
+        position:absolute;
+        bottom:2.5%;
+        left:5%;
+        font-size: 18px;
+        font-weight: 300;
+        color: white;
+    }
+
+    // Next Button
+    .nextButton {
+        background:none;
+        border:none;
+        position:absolute;
+        bottom:2.5%;
+        right:5%;
+        font-size: 18px;
+        font-weight: 300;
+        color: white;
+    }
+
+    // Get Started Button
+    .getStartedButton {
+        background:none;
+        font-size: 18px;
+        border-style: solid;
+        border-width: 2px;
+        border-color:white;
+        color: white;
+        position: absolute;
+        bottom:2.5%;
+        left:33%;
+        
+    }
 }
