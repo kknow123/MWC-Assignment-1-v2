@@ -1,12 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the SliderPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SliderPage {
 
+  @ViewChild(Slides) slides: Slides;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SliderPage');
+  }
+
+  skipSlide () {
+    this.slides.slideTo(2, 500);
+  }
+
+  nextSlide() {
+    this.slides.slideTo(1, 500);
+  }
+
+  nextNextSlide() {
+    this.slides.slideTo(2, 500);
   }
 
 }

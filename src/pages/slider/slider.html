@@ -4,72 +4,57 @@
     <!-- 1st slider -->
     <ion-slide class="textColor" style="background-color:#4E7AC7">
 
-      <!-- Header -->
       <div class="boxHeader">
           <h1>Welcome To B.O.S</h1>
       </div>
       
-      <!-- Slider Image -->
       <ion-img class="slider1Display" src="assets/imgs/SliderPage/slider1.png"></ion-img>
 
-      <!-- Description -->
       <div class="boxPara">
         <p>A shopping app <br/> that can help your business <br/> successful</p>
       </div>
 
-      <!-- Line -->
       <div class="whiteLine"></div>
 
-      <!-- Buttons -->
-      <button class="skipButton">SKIP</button>
-      <button class="nextButton">NEXT</button>
+      <button class="skipButton" (click)="skipSlide()">SKIP</button>
+      <button class="nextButton" (click)="nextSlide()">NEXT</button>
     </ion-slide>
     
     <!-- 2nd slider -->
     <ion-slide class="textColor" style="background-color:#35478C">
 
-        <!-- Header -->
         <div class="boxHeader">
             <h1>Centralized Platform</h1>
         </div>
         
-        <!-- Slider Image -->
         <ion-img class="slider2Display" src="assets/imgs/SliderPage/slider2.png"></ion-img>
   
-        <!-- Description -->
         <div class="boxPara">
           <p>Promote / Sell / Buy <br/> products in a single location</p>
         </div>
         
-        <!-- Line -->
         <div class="whiteLine"></div>
 
-        <!-- Buttons -->
-        <button class="skipButton">SKIP</button>
-        <button class="nextButton">NEXT</button>
+        <button class="skipButton" (click)="skipSlide()">SKIP</button>
+        <button class="nextButton" (click)="nextNextSlide()">NEXT</button>
     </ion-slide>
 
     <!-- 3rd slider -->
     <ion-slide class="textColor" style="background-color:#292975">
       
-        <!-- Header -->
         <div class="boxHeader">
             <h1>Enjoy Your Shopping</h1>
         </div>
         
-        <!-- Slider Image -->
         <ion-img class="slider3Display" src="assets/imgs/SliderPage/slider3.png"></ion-img>
-  
-        <!-- Description -->
+
         <div class="boxPara">
           <p>Get up-to-date products <br/> details and buy it with <br/> best price with faster delivery</p>
         </div>
         
-        <!-- Line -->
         <div class="whiteLine"></div>
 
-        <!-- Buttons -->
-        <button class="getStartedButton">LET'S GO</button>
+        <button id="letsGoButton">LET'S GO</button>
      </ion-slide>
   </ion-slides>
 </ion-content>

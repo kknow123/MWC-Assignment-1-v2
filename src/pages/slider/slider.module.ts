@@ -11,3 +11,5 @@ import { SliderPage } from './slider';
   ],
 })
 export class SliderPageModule {}
+
+
