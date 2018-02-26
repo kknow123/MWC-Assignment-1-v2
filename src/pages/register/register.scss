@@ -29,14 +29,17 @@ page-register {
     // Placeholder text field color
     .text-input::-moz-placeholder {
         color: #D6D4D4;
+        font-weight: bold;
       }
       
       .text-input:-ms-input-placeholder {
         color: #D6D4D4;
+        font-weight: bold;
       }
       
       .text-input::-webkit-input-placeholder {
         color: #D6D4D4;
+        font-weight: bold;
       }
 
     // agreement text color

@@ -18,15 +18,18 @@ page-login {
     }
 
     .text-input::-moz-placeholder {
-        color: #D6D4D4;
+        color: #BFBFBF;
+        font-weight: bold;
       }
       
       .text-input:-ms-input-placeholder {
-        color: #D6D4D4;
+        color: #BFBFBF;
+        font-weight: bold;
       }
       
       .text-input::-webkit-input-placeholder {
-        color: #D6D4D4;
+        color: #BFBFBF;
+        font-weight: bold;
       }
 
     button {
