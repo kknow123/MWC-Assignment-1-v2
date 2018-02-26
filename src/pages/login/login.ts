@@ -15,7 +15,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  navigateToRegisterPage() {
+  navigateToRegisterPage(){
     this.navCtrl.push('RegisterPage');
   }
 
