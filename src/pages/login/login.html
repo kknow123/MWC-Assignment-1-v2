@@ -2,17 +2,17 @@
 
         <ion-img class="displayLogo" src="assets/imgs/BOSlogo/Logo.png"></ion-img>
 
-    <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+    <form>
         <ion-row>
           <ion-col>
             <ion-list inset>
               <ion-item class="input-color">
                 <ion-label class="icon-color"><ion-icon ios="ios-mail" md="md-mail" style="zoom:1.2;"></ion-icon></ion-label>
-                <ion-input placeholder="Email Address" name="username" id="loginField" type="text" required [(ngModel)]="username" #email></ion-input>
+                <ion-input placeholder="Email Address" name="username" id="loginField" type="text" ></ion-input>
               </ion-item>
               <ion-item class="input-color">
                   <ion-label class="icon-color"><ion-icon ios="ios-key" md="md-key" style="zoom:1.2;"></ion-icon></ion-label>
-                <ion-input placeholder="Password" name="password" id="passwordField" type="password" required [(ngModel)]="password"></ion-input>
+                <ion-input placeholder="Password" name="password" id="passwordField" type="password" ></ion-input>
               </ion-item>
             </ion-list>
           </ion-col>
@@ -20,15 +20,17 @@
 
         <ion-row>
           <ion-col>
-            <div *ngIf="error" class="alert alert-danger">{{error}}</div>
             <div id="display-btn">
-                <button ion-button id="signup-btn" >SIGN UP</button>
-                <button ion-button id="login-btn" [disabled]="!loginForm.form.valid">LOG IN</button>
+                <button ion-button id="signup-btn" (click)="navigateToRegisterPage()">SIGN UP</button>
+                <button ion-button id="login-btn" >LOG IN</button>
             </div>
           </ion-col>
         </ion-row>
       </form>
-
+      <div class="center">
+        <button class="lostPassword-btn">Lost Password?</button>
+      </div>
+      
       <div class="div-btm"></div>
       <ion-img class="instruction" src="assets/imgs/instruction/instruction1.png"></ion-img>
 </ion-content>

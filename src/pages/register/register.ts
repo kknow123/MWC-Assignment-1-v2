@@ -8,7 +8,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage(
+  {
+    name:'RegisterPage'
+    }
+)
+
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html',
@@ -21,5 +26,4 @@ export class RegisterPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');
   }
-
 }
