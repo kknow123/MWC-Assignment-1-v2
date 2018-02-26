@@ -1,17 +1,21 @@
 page-login {
     #body {
         background-color: #F7F8FF;
-        font-family: roboto;
+        font-family: roboto-bold;
     }
 
     .displayLogo {
         width: 310px;
-        height: 240px;
+        height: 250px;
         background-color: #F7F8FF;
         display: block;
         margin-left: auto;
         margin-right: auto;
 
+    }
+
+    .icon-color {
+        color: #b9b9bb;
     }
 
     button {
@@ -38,7 +42,7 @@ page-login {
         height: 197px;
         background-color: transparent;
         position: absolute;
-        bottom: -1%;
+        bottom: 0%;
         right: 0%;
     }
 
@@ -48,5 +52,9 @@ page-login {
         bottom: 0%;
         width: 100%;
         background-color: #E5EAFF;
+    }
+
+    .input-color {
+        background-color: #F7F8FF;
     }
 }

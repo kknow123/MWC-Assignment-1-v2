@@ -6,10 +6,12 @@
         <ion-row>
           <ion-col>
             <ion-list inset>
-              <ion-item>
+              <ion-item class="input-color">
+                <ion-label class="icon-color"><ion-icon ios="ios-mail" md="md-mail" style="zoom:1.2;"></ion-icon></ion-label>
                 <ion-input placeholder="Email Address" name="username" id="loginField" type="text" required [(ngModel)]="username" #email></ion-input>
               </ion-item>
-              <ion-item>
+              <ion-item class="input-color">
+                  <ion-label class="icon-color"><ion-icon ios="ios-key" md="md-key" style="zoom:1.2;"></ion-icon></ion-label>
                 <ion-input placeholder="Password" name="password" id="passwordField" type="password" required [(ngModel)]="password"></ion-input>
               </ion-item>
             </ion-list>
