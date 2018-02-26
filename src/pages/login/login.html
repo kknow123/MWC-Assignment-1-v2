@@ -1,3 +1,33 @@
-<ion-content>
+<ion-content id="body">
 
+        <ion-img class="display" src="assets/imgs/BOSlogo/Logo.png"></ion-img>
+
+    <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+              <ion-item>
+                <ion-input placeholder="Email Address" name="username" id="loginField" type="text" required [(ngModel)]="username" #email></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input placeholder="Password" name="password" id="passwordField" type="password" required [(ngModel)]="password"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+            <div id="display-btn">
+                <button ion-button id="signup-btn" >SIGN UP</button>
+                <button ion-button id="login-btn" [disabled]="!loginForm.form.valid">LOG IN</button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </form>
+
+      <div>
+
+      </div>
 </ion-content>

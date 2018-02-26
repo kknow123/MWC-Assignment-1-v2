@@ -1,3 +1,33 @@
 page-login {
+    #body {
+        background-color: #F7F8FF;
+        font-family: roboto;
+    }
 
+    .display {
+        width: 310px;
+        height: 240px;
+        background-color: #F7F8FF;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    #display-btn{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    #login-btn {
+        background-color: #292975;
+        width: 153px;
+    }
+
+    #signup-btn {
+        background-color: #000000;
+        width: 153px;
+    }
 }
