@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
-import { LoginPage } from '../login/login';
 
 @IonicPage()
 @Component({
@@ -28,6 +27,10 @@ export class SliderPage {
 
   nextNextSlide() {
     this.slides.slideTo(2, 500);
+  }
+
+  navigateToLoginPage() {
+    this.navCtrl.push('LoginPage');
   }
 
 }
