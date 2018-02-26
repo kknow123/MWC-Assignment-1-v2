@@ -1,5 +1,86 @@
 page-register {
+    // Body Content
+    #body {
+        background-color: #F7F8FF;
+        font-family: roboto;
+    }
 
+    // Centralized Field
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 360px;
+    }
+    
+    // Label Box Color
+    .labelBoxColor {
+        background-color: #E5EAFF;
+        height: 42px;
+        padding-top: 3%;
+    }
+
+    // Label Text 
+    .labelText {
+        font-size: 14px;
+        color: #787878;
+        font-weight: bold;
+    }
+
+    // Placeholder text field color
+    .text-input::-moz-placeholder {
+        color: #D6D4D4;
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color: #D6D4D4;
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        color: #D6D4D4;
+      }
+
+    // agreement text color
+    .agreementCenter {
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: #A3A2A2;
+    }
+
+    // white line
+    .whiteLine {
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D4D4D4 #D4D4D4 #D4D4D4 #D4D4D4;
+    }
+
+    // all button
+    button {
+        width: 348px;
+    }
+
+    //register button
+    #register-btn {
+        background-color: #000000;
+        font-weight: bold;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // back button
+    #back-btn {
+        background-color: #869BEB;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+        display: block;
+    }
+
+    // Instruction Picture
     .instruction {
         width: 350px;
         height: 185px;
@@ -9,6 +90,7 @@ page-register {
         right: 0%;
     }
 
+    // coloured div box bottom
     .div-btm {
         height: 42px;
         position: absolute;
