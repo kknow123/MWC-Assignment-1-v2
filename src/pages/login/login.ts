@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../models/user';
+import { AngularFireAuth } from "angularfire2/auth";
 
 @IonicPage({
   name: 'LoginPage'
@@ -8,12 +9,15 @@ import { User } from '../../models/user';
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
+  providers: [AngularFireAuth]
 })
 export class LoginPage {
 
   user = {} as User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private afAuth: AngularFireAuth, 
+    
+    public navCtrl: NavController, public navParams: NavParams) {
   }
 
   navigateToRegisterPage(){
@@ -24,8 +28,20 @@ export class LoginPage {
     this.navCtrl.push('LostPasswordPage');
   }
 
-  login() {
-    
+  async login(user: User) {
+    try {
+      const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
+      if (result) {
+        this.navCtrl.push('HomePage');
+      } 
+    } catch (e) {
+      console.error(e);
+    }
+   
   }
+
+  // login() {
+  //   this.navCtrl.push('HomePage');
+  // }
 
 }
