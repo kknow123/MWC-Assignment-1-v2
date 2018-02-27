@@ -3,7 +3,7 @@
   <ion-img class="displayLogo" src="assets/imgs/BOSlogo/Logo.png"></ion-img>
 
   <!-- Form -->
-  <form #loginForm="ngForm" [formGroup]="formgroup" autocomplete="off">
+  <form #loginForm="ngForm" [formGroup]="formgroup" autocomplete="off" >
     <div class="center1"> 
       <ion-row>
         <ion-col>
@@ -15,24 +15,17 @@
               <ion-input class="text-input" placeholder="Email Address" formControlName="email" type="text" required [(ngModel)]="user.email"
                 #email></ion-input>
             </ion-item>
+            
             <ion-item class="input-color">
               <ion-label class="icon-color">
                 <ion-icon ios="ios-key" md="md-key" style="zoom:1.2;"></ion-icon>
               </ion-label>
               <ion-input class="text-input" placeholder="Password" formControlName="password" type="password" required [(ngModel)]="user.password"></ion-input>
             </ion-item>
-
             <!-- Error Validation -->
-
-            <div class="error" *ngIf="formgroup.get('email').hasError('required') && formgroup.get('email').touched">
-              *Email is required
-            </div>
-            <div class="error" *ngIf="formgroup.get('password').hasError('required') && formgroup.get('password').touched">
-              *Password is required
-            </div>
-            <div class="error" *ngIf="">
-                *Invalid Email / Password
-            </div>  
+            <div class="error" *ngIf="formgroup.get('email').hasError('pattern')">
+                *Invalid Email Format
+            </div> 
           </ion-list>
         </ion-col>
       </ion-row>
