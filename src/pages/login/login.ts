@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { User } from '../../models/user';
 
 @IonicPage({
   name: 'LoginPage'
@@ -10,11 +11,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  user = {} as User;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   navigateToRegisterPage(){
@@ -23,6 +22,10 @@ export class LoginPage {
 
   navigateToLostPasswordPage(){
     this.navCtrl.push('LostPasswordPage');
+  }
+
+  login() {
+    
   }
 
 }
