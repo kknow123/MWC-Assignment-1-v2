@@ -1,35 +1,51 @@
 <ion-content id="body">
-        <ion-img class="displayLogo" src="assets/imgs/BOSlogo/Logo.png"></ion-img>
-    <form #loginForm="ngForm" autocomplete="off">
-      <div class="center1"> 
-          <ion-row>
-              <ion-col>
-                <ion-list inset class="ilist">
-                  <ion-item class="input-color">
-                    <ion-label class="icon-color"><ion-icon ios="ios-mail" md="md-mail" style="zoom:1.2;"></ion-icon></ion-label>
-                    <ion-input class="text-input" placeholder="Email Address" name="username" id="emailField" type="text" required [(ngModel)]="user.email" #email ></ion-input>
-                  </ion-item>
-                  <ion-item class="input-color">
-                      <ion-label class="icon-color"><ion-icon ios="ios-key" md="md-key" style="zoom:1.2;"></ion-icon></ion-label>
-                    <ion-input class="text-input" placeholder="Password" name="password" id="passwordField" type="password" required [(ngModel)]="user.password"></ion-input>
-                  </ion-item>
-                </ion-list>
-              </ion-col>
-            </ion-row>
-      </div>
-        <ion-row>
-          <ion-col>
-            <div id="display-btn">
-                <button ion-button id="signup-btn" (click)="navigateToRegisterPage()">SIGN UP</button>
-                <button ion-button id="login-btn" (click)="login(user)" [disabled]="!loginForm.form.valid">LOG IN</button>
+  <!-- BOS Logo -->
+  <ion-img class="displayLogo" src="assets/imgs/BOSlogo/Logo.png"></ion-img>
+
+  <!-- Form -->
+  <form #loginForm="ngForm" [formGroup]="formgroup" autocomplete="off">
+    <div class="center1"> 
+      <ion-row>
+        <ion-col>
+          <ion-list inset class="ilist">
+            <ion-item class="input-color">
+              <ion-label class="icon-color">
+                <ion-icon ios="ios-mail" md="md-mail" style="zoom:1.2;"></ion-icon>
+              </ion-label>
+              <ion-input class="text-input" placeholder="Email Address" formControlName="email" type="text" required [(ngModel)]="user.email"
+                #email></ion-input>
+            </ion-item>
+            <ion-item class="input-color">
+              <ion-label class="icon-color">
+                <ion-icon ios="ios-key" md="md-key" style="zoom:1.2;"></ion-icon>
+              </ion-label>
+              <ion-input class="text-input" placeholder="Password" formControlName="password" type="password" required [(ngModel)]="user.password"></ion-input>
+            </ion-item>
+
+            <!-- Error Validation -->
+
+            <div class="error" *ngIf="formgroup.get('email').hasError('required') && formgroup.get('email').touched">
+              *Email is required
             </div>
-          </ion-col>
-        </ion-row>
-      </form>
-      <div class="center">
-        <button class="lostPassword-btn" (click)="navigateToLostPasswordPage()">Lost Password?</button>
-      </div>
-      
-      <div class="div-btm"></div>
-      <ion-img class="instruction" src="assets/imgs/instruction/instruction1.png"></ion-img>
+            <div class="error" *ngIf="formgroup.get('password').hasError('required') && formgroup.get('password').touched">
+              *Password is required
+            </div>
+            <div class="error" *ngIf="">
+                *Invalid Email / Password
+            </div>  
+          </ion-list>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div id="display-btn">
+      <button ion-button id="signup-btn" (click)="navigateToRegisterPage()">SIGN UP</button>
+      <button ion-button id="login-btn" (click)="login(user)" [disabled]="!loginForm.form.valid">LOG IN</button>
+    </div>
+  </form>
+  <div class="center">
+    <button class="lostPassword-btn" (click)="navigateToLostPasswordPage()">Lost Password?</button>
+  </div>
+
+  <div class="div-btm"></div>
+  <ion-img class="instruction" src="assets/imgs/instruction/instruction1.png"></ion-img>
 </ion-content>

@@ -1,9 +1,11 @@
 page-login {
+
+    // Body Content
     #body {
         background-color: #F7F8FF;
-        font-family: roboto-bold;
     }
 
+    // Logo Display
     .displayLogo {
         width: 260px;
         height: 200px;
@@ -13,10 +15,12 @@ page-login {
         margin-right: auto;
     }
     
+    // Icon Color
     .icon-color {
         color: #b9b9bb;
     }
 
+    // text field's place holder
     .text-input::-moz-placeholder {
         color: #BFBFBF;
         font-weight: bold;
@@ -32,16 +36,25 @@ page-login {
         font-weight: bold;
       }
 
+      // Error Validation
+    .error {
+        color: red;
+        font-size: 15px;
+        font-weight: bolder;
+        background-color: #F7F8FF;
+        padding-top: 2%;
+        
+    }
+
     button {
         width: 153px;
+        
     }
 
     #display-btn{
-        display: block;
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
-        
+        text-align: center; 
     }
 
     #login-btn {
@@ -55,8 +68,8 @@ page-login {
     }
 
     .instruction {
-        width: 343px;
-        height: 197px;
+        width: 320px;
+        height: 182px;
         background-color: transparent;
         position: absolute;
         bottom: 0%;
@@ -65,7 +78,7 @@ page-login {
 
     .center {
         text-align: center;
-        padding-top: 3%;
+        padding-top: 2%;
     }
 
     .lostPassword-btn {
@@ -99,4 +112,5 @@ page-login {
         margin-right: auto;
         width: 360px;
     }
+
 }
