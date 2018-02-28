@@ -5,6 +5,7 @@
               <ion-col>
                 <ion-list >
 
+                  <!-- Email Address Field -->
                   <div class="labelBoxColor">
                     <ion-label class="labelText">Email Address*</ion-label>
                   </div>
@@ -12,6 +13,7 @@
                     <ion-input class="text-input" placeholder="Enter Email Address" formControlName="email" type="text" required [(ngModel)]="user.email" #email></ion-input>
                   </ion-item>
 
+                  <!-- Password Field -->
                   <div class="labelBoxColor">
                     <ion-label class="labelText">Password*</ion-label>
                   </div>
@@ -19,6 +21,7 @@
                       <ion-input placeholder="Enter Password (6-12 Characters)" formControlName="password" type="password" required [(ngModel)]="user.password"></ion-input>
                   </ion-item>
 
+                  <!-- Confirm Password Field -->
                   <div class="labelBoxColor">
                     <ion-label class="labelText">RE-TYPE Password*</ion-label>
                   </div>
@@ -26,6 +29,10 @@
                     <ion-input placeholder="Enter Password (6-12 Characters)" formControlName="confirmPassword" type="password" required [(ngModel)]="user.confirmPassword"></ion-input>
                   </ion-item>
 
+                  <!-- Validation Errors -->
+                  <div class="error" *ngIf="(formgroup.get('confirmPassword').hasError('equalTo') || formgroup.get('confirmPassword').hasError('required')) && formgroup.get('confirmPassword').touched">
+                    *Password Mismatch
+                  </div> 
                   <p class="agreementCenter">By Signing up, I agree to the <b style="color:#615E5E;">Terms of USE</b> <br/> and <b style="color:#615E5E;">Privacy USE</b> of B.O.S</p>
                   <div class="whiteLine"></div>
                 </ion-list>

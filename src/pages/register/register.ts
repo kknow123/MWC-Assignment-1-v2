@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { User } from '../../models/user';
 import { AngularFireAuth } from "angularfire2/auth";
-import { FormBuilder, FormGroup, Validators, AbstractControl } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators, AbstractControl, ValidatorFn } from "@angular/forms";
 
 @IonicPage({
   name: 'RegisterPage'
@@ -32,7 +32,7 @@ export class RegisterPage {
       this.formgroup = formbuilder.group({
         email:['',[Validators.required, Validators.email, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
         password:['',[Validators.required, Validators.minLength(6), Validators.maxLength(12)]],
-        confirmPassword:['',[Validators.required, Validators.minLength(6), Validators.maxLength(12)]]
+        confirmPassword:['',[Validators.required, Validators.minLength(6), Validators.maxLength(12), this.equalTo('password')]]
       });
 
       this.email = this.formgroup.controls['email'];
@@ -40,10 +40,24 @@ export class RegisterPage {
       this.confirmPassword = this.formgroup.controls['confirmPassword'];
   }
 
+  // check whether both password and confirmPassword are equal
+  equalTo(field_name): ValidatorFn {
+    return (control: AbstractControl): {[key: string]: any} => {
+    let input = control.value;
+    let isValid=control.root.value[field_name]==input
+    if(!isValid) 
+    return { 'equalTo': {isValid} }
+    else 
+    return null;
+    };
+    }
+
+  // go to 
   navigateToLoginPage() {
     this.navCtrl.push('LoginPage');
   }
 
+  // register new email account
   async register(user: User) {
     {
       // create loading 
@@ -55,7 +69,7 @@ export class RegisterPage {
       .then(auth => {
         // if not in use; go back to LoginPage
         let alert = this.alertCtrl.create({
-          subTitle: 'Successfully Registered!',
+          title: 'Successfully Registered!',
           buttons: [{
             text: 'OK',
              handler: data => {
@@ -70,7 +84,7 @@ export class RegisterPage {
         // if it is already in use; create alert message
         let alert = this.alertCtrl.create({
           title: 'Invalid',
-          subTitle: 'Email already in-use<br\> Please Try Again!',
+          subTitle: 'Email already in-use /<br\> Incorrect Email Format<br\> Please Try Again!',
           buttons: ['OK']
         });
         // loading disapear & alert appear

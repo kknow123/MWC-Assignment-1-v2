@@ -42,6 +42,16 @@ page-register {
         font-weight: bold;
       }
 
+       // Error Validation
+    .error {
+        color: red;
+        font-size: 15px;
+        font-weight: bolder;
+        background-color: #F7F8FF;
+        padding-top: 2%;
+        
+    }
+
     // agreement text color
     .agreementCenter {
         text-align: center;
