@@ -23,7 +23,7 @@
               <ion-input class="text-input" placeholder="Password" formControlName="password" type="password" required [(ngModel)]="user.password"></ion-input>
             </ion-item>
             <!-- Error Validation -->
-            <div class="error" *ngIf="formgroup.get('email').hasError('pattern')">
+            <div class="error" *ngIf="formgroup.get('email').hasError('pattern') && formgroup.get('email').touched">
                 *Invalid Email Format
             </div> 
           </ion-list>
