@@ -18,8 +18,6 @@ export class TabsPage {
   tab2 = 'CategoriesPage';
   tab3 = 'CartPage';
   tab4 = 'AccountPage';
-  tab5 = 'SliderPage';
-  tab6 = 'LoginPage';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

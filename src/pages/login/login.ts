@@ -58,7 +58,7 @@ export class LoginPage {
     this.afAuth.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
     .then(auth => {
       // if valid; set HomePage as root page
-      this.navCtrl.setRoot('HomePage');
+      this.navCtrl.setRoot('TabsPage');
       loader.dismiss();
     })
     .catch(err => {

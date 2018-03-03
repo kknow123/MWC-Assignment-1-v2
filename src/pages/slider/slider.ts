@@ -7,7 +7,7 @@ import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
   templateUrl: 'slider.html',
 })
 export class SliderPage {
-
+  
   @ViewChild(Slides) slides: Slides;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
