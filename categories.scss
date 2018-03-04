@@ -1,0 +1,30 @@
+page-categories {
+    ion-content{
+        background: rgb(139, 138, 138) !important;
+    }
+    ion-title {
+        text-align: center;
+    }
+    .row {
+        height: 35vw;
+    }
+    .col {
+        padding: 0px;
+    }
+    img {
+        width: 150px;
+        height: 80px;
+        padding-top: 10%;
+    }
+    .image_category {
+        text-align: center;
+        background: white;
+        -webkit-box-shadow: 9px 14px 31px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 9px 14px 31px 0px rgba(0,0,0,0.75);
+        box-shadow: 9px 14px 31px 0px rgba(0,0,0,0.75);
+        height: 35vw;
+    }
+    .cattext {
+        word-wrap: break-word;
+    }
+}
