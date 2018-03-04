@@ -34,4 +34,8 @@ export class AccountPage {
     }, 1000);
   }
 
+  navigateToSettingPage() {
+    this.navCtrl.push('SettingsPage');
+  }
+
 }

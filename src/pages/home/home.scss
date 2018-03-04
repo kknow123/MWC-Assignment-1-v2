@@ -1,14 +1,22 @@
 page-home {
 
-ion-slides{
-height: 140px;
-width: 400px;
+    ion-slides{
 
-}    
-img{
-height: 120px;
-width: 400px;
-}
+        height: 140px;
+        width: 330px;
+    }   
+
+    img{
+
+        height: 120px;
+        width: 300px;
+    }
+
+    #slideshowPreview {
+        position: absolute;
+        text-align: center;
+
+    }
 
 
 
