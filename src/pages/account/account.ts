@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
 /**
  * Generated class for the AccountPage page.
@@ -8,18 +8,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  name: 'AccountPage'
+})
+
 @Component({
   selector: 'page-account',
   templateUrl: 'account.html',
 })
 export class AccountPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public loadingCtrl: LoadingController,
+    public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AccountPage');
+  async logout() {
+    let loader = this.loadingCtrl.create({
+    })
+    loader.present();
+    setTimeout(() => {
+      loader.dismiss();
+      this.navCtrl.setRoot('LoginPage');
+    }, 1000);
   }
 
 }

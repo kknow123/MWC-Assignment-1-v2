@@ -1,3 +1,63 @@
 page-account {
 
+    ion-content {
+        font-family: quicksand;
+    }
+
+    #titleCenter {
+        text-align: center;
+    }
+
+    #profileBGcolor {
+        background-color: #24244F;
+        position: absolute;
+        top: 1%;
+        width: 100%;
+        height: 260px;
+    }
+
+    #profileBGcenter{
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .profileBGtext {
+        font-size: 18px;
+        color: #CFCFCF;
+        font-weight: bold;
+        text-shadow: 0px 1px black;
+        letter-spacing: 3px;
+    }
+
+    #userProfileImage {
+        width: 151px;
+        height: 142px;
+        background-color: #24244F;
+    }
+
+    #buttonCenter {
+        padding-top: 3%;
+        position: relative;
+        display: block;
+        text-align: left;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .buttonColorWhite {
+        background-color: #F0F4F5;
+        color: black;
+        font-weight: bold;
+    }
+
+    .buttonColorGrey {
+        background-color: #DBDBDB;
+        color: black;
+        font-weight: bold;
+    }
 }

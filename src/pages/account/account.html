@@ -1,18 +1,22 @@
-<!--
-  Generated template for the AccountPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>ACCOUNT</ion-title>
+    <ion-title id="titleCenter">ACCOUNT</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content>
+<div id="profileBGcolor">
+  <div id="profileBGcenter">
+    <p class="profileBGtext">~ Welcome to B.O.S! ~</p>
+    <ion-img id="userProfileImage" src="assets/imgs/ProfileImage/Muslim.png"></ion-img>
+    <p class="profileBGtext">Nickname</p>
 
-<ion-content padding>
-
+    <div id="buttonCenter">
+        <button ion-button icon-start class="buttonColorGrey" regular><ion-icon ios="ios-basket" md="md-basket"></ion-icon>My Orders</button>
+        <button ion-button icon-start class="buttonColorWhite" regular><ion-icon ios="ios-settings" md="md-settings"></ion-icon>Settings</button>
+        <button ion-button icon-start class="buttonColorGrey" regular><ion-icon ios="ios-chatboxes" md="md-chatboxes"></ion-icon>FAQ</button>
+        <button ion-button icon-start class="buttonColorWhite" regular (click)="logout()"><ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>Logout</button>
+    </div>
+  </div>
+</div>
 </ion-content>

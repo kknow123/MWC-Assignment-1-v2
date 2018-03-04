@@ -75,15 +75,3 @@ export class LoginPage {
   }
 }
 
-// try {
-    //   const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
-    //   let loader = this.loadingCtrl.create({
-    //   });
-    //   loader.present();
-    //   if (result) {
-    //     loader.dismiss();
-    //     this.navCtrl.push('HomePage');
-    //   }
-    // } catch (e) {
-    //   console.error(e);
-    // }
