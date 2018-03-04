@@ -4,18 +4,43 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content id="body">
 <div id="profileBGcolor">
   <div id="profileBGcenter">
     <p class="profileBGtext">~ Welcome to B.O.S! ~</p>
     <ion-img id="userProfileImage" src="assets/imgs/ProfileImage/Muslim.png"></ion-img>
     <p class="profileBGtext">Nickname</p>
-
+    
     <div id="buttonCenter">
-        <button ion-button icon-start class="buttonColorGrey" regular><ion-icon ios="ios-basket" md="md-basket"></ion-icon>My Orders</button>
-        <button ion-button icon-start class="buttonColorWhite" regular><ion-icon ios="ios-settings" md="md-settings"></ion-icon>Settings</button>
-        <button ion-button icon-start class="buttonColorGrey" regular><ion-icon ios="ios-chatboxes" md="md-chatboxes"></ion-icon>FAQ</button>
-        <button ion-button icon-start class="buttonColorWhite" regular (click)="logout()"><ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>Logout</button>
+        <ion-list-header><p>My Account</p></ion-list-header>
+        <button ion-item regular color="dark">
+            <ion-label>
+                <p>My Orders</p>
+            </ion-label>  
+          <i item-left><ion-icon ios="ios-basket" md="md-basket"></ion-icon></i>
+      </button>
+
+      <button ion-item regular color="dark">
+          <ion-label>
+              <p>Settings</p>
+          </ion-label>  
+        <i item-left><ion-icon ios="ios-settings" md="md-settings"></ion-icon></i>
+    </button>
+
+    <button ion-item regular color="dark">
+        <ion-label>
+            <p>FAQ</p>
+        </ion-label>  
+      <i item-left><ion-icon ios="ios-chatboxes" md="md-chatboxes"></ion-icon></i>
+  </button>
+
+  <button ion-item regular color="dark" (click)="logout()">
+      <ion-label>
+          <p>Logout</p>
+      </ion-label>  
+    <i item-left><ion-icon ios="ios-log-out" md="md-log-out"></ion-icon></i>
+</button>
+
     </div>
   </div>
 </div>
