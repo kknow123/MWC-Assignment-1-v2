@@ -24,7 +24,6 @@
 </ion-header>
 
 <ion-content>
-<<<<<<< HEAD
     <ion-slides autoplay="5000" loop="true" speed="3000">
         <ion-slide >
           <img src="../../assets/imgs/ads/ads1.jpg" class="img">
@@ -36,58 +35,7 @@
           <img src="../../assets/imgs/ads/ads3.png" class="img">
         </ion-slide>
       </ion-slides>
-    
-      <!-- <div padding>
-=======
-      <ion-slides autoplay="5000" loop="true" speed="2000">
-          <ion-slide >
-            <img src="../../assets/imgs/ads/ads1.jpg" class="img">
-          </ion-slide>
-          <ion-slide >
-            <img src="../../assets/imgs/ads/ads2.jpg" class="img">
-          </ion-slide>
-          <ion-slide >
-            <img src="../../assets/imgs/ads/ads3.png" class="img">
-          </ion-slide>
-      </ion-slides>
-    
-    
-      <div padding>
->>>>>>> 408a2cff45118d4a4eb9ae3a7897cb8a794c7a8a
-        <ion-segment [(ngModel)]="segment">
-          <ion-segment-button value="mpopular">
-            Most Popular
-          </ion-segment-button>
-          <ion-segment-button value="new">
-            New
-          </ion-segment-button>
-          <ion-segment-button value="Trending">
-            Trending
-          </ion-segment-button>
-        </ion-segment>
-      </div>
-      
-      <div [ngSwitch]="segment">
-        <ion-list *ngSwitchCase="'mpopular'">
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="../../assets/imgs/ads/ads1.jpg">
-            </ion-thumbnail>
-            <h2>Ruby</h2>
-          </ion-item>
-          ...
-        </ion-list>
-      
-        <ion-list *ngSwitchCase="'kittens'">
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="img/thumbnail-kitten-1.jpg">
-            </ion-thumbnail>
-            <h2>Luna</h2>
-          </ion-item>
-          ...
-        </ion-list> 
-      </div> -->
+
       <div class="segment">Most Popular</div>
       <div class="graydiv"><ion-slides autoplay="5000" loop="true" speed="4000">
           <ion-slide class="slide-small">
@@ -109,30 +57,40 @@
       <div class="segment">Trending</div>
       <div class="graydiv">    
         <ion-slides autoplay="5000" loop="true" speed="4000">
-          <ion-slide >
-            <img src="../../assets/imgs/ads/ads1.jpg" class="small">
+          <ion-slide class="slide-small">
+            <div>
+            <img src="../../assets/imgs/categories/small1.png" class="small">
+            <img src="../../assets/imgs/categories/small1.png" class="small">
+            <img src="../../assets/imgs/categories/small1.png" class="small">
+          </div>
           </ion-slide>
-          <ion-slide >
-            <img src="../../assets/imgs/ads/ads2.jpg" class="small">
-          </ion-slide>
-          <ion-slide >
-            <img src="../../assets/imgs/ads/ads3.png" class="small">
-          </ion-slide>
+          <ion-slide class="slide-small">
+            <div>
+              <img src="../../assets/imgs/categories/small1.png" class="small">
+              <img src="../../assets/imgs/categories/small1.png" class="small">
+              <img src="../../assets/imgs/categories/small1.png" class="small">
+            </div>
+            </ion-slide>
         </ion-slides>
       </div>
       
       <div class="segment">New</div>
          <div class="graydiv">    
            <ion-slides autoplay="5000" loop="true" speed="4000">
-            <ion-slide >
-              <img src="../../assets/imgs/ads/ads1.jpg" class="small">
+            <ion-slide class="slide-small">
+              <div>
+              <img src="../../assets/imgs/categories/small1.png" class="small">
+              <img src="../../assets/imgs/categories/small1.png" class="small">
+              <img src="../../assets/imgs/categories/small1.png" class="small">
+            </div>
             </ion-slide>
-            <ion-slide >
-              <img src="../../assets/imgs/ads/ads2.jpg" class="small">
-            </ion-slide>
-            <ion-slide >
-              <img src="../../assets/imgs/ads/ads3.png" class="small">
-            </ion-slide>
+            <ion-slide class="slide-small">
+              <div>
+                <img src="../../assets/imgs/categories/small1.png" class="small">
+                <img src="../../assets/imgs/categories/small1.png" class="small">
+                <img src="../../assets/imgs/categories/small1.png" class="small">
+              </div>
+              </ion-slide>
           </ion-slides>
         </div>
         
