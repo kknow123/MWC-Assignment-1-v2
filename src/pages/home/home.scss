@@ -13,21 +13,24 @@ width: 400px;
     height: 100px;
     width: 100px;
 }
-// .slide-small{
-//     height: 100px;
-//     width: 100px;
-// }
+.slide-small{
+   text-align: left;
+}
 
 .segment{
     background-color: #35478C;
     height: 40px;
+    width: 500px;
     color: #F7F8FF;
     vertical-align:middle;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
+    display: table-cell;
     text-align: center;
 }
-
+.graydiv{
+    background-clip: #E5E5E5;
+}
 
 
 }
