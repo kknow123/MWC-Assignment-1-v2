@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, App } from 'ionic-angular';
 
 /**
  * Generated class for the AccountPage page.
@@ -19,6 +19,7 @@ import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-an
 export class AccountPage {
 
   constructor(
+    public app: App,
     public loadingCtrl: LoadingController,
     public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -29,8 +30,12 @@ export class AccountPage {
     loader.present();
     setTimeout(() => {
       loader.dismiss();
-      this.navCtrl.setRoot('LoginPage');
+      this.app.getRootNav().setRoot('LoginPage');
     }, 1000);
+  }
+
+  navigateToSettingPage() {
+    this.navCtrl.push('SettingsPage');
   }
 
 }
