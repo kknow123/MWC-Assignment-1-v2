@@ -1,8 +1,51 @@
 page-categories {
-
-    ion-list.h2 {
-        margin-right: 50px;
-
+    
+    ion-content {
+        font-family: quicksand;
     }
 
+    #body {
+        background-color: #F7F8FF;
+    }
+
+    #titleCenter {
+        text-align: center;
+    }
+
+    #settingHeader {
+        padding-top: 3%;
+        position: relative;
+        display: block;
+        text-align: left;
+    }
+
+    .SwipedTabs-indicatorSegment
+    {
+        -webkit-transition: 0.3s all;
+        -moz-transition:  0.3s all;
+        -o-transition:  0.3s all;
+        transition:  0.3s all;
+        transform-origin: top 0 left 0;
+        height: 1px;
+	    position: relative;
+	    top: -2px;
+	    background-color: black !important;
+    }
+    .SwipedTabs-tabs ion-segment-button
+    {
+    	border:none !important;
+    	color:gray!important;
+    	background-color:white!important;
+    }
+     .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+    {
+        color:black !important;
+        font-weight: bolder;
+        font-size: 14px;
+    }
+    .SwipedTabs-tabs
+    {
+        border: solid 1px #e6e6e6  !important;
+        height: 40px;
+    }
 }
