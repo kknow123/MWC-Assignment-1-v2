@@ -12,7 +12,7 @@
 
 
 <ion-content>
-  <form autocomplete="off">
+  <form #settingForm="ngForm" [formGroup]="formgroup" autocomplete="off">
     <div class="center"> 
         <ion-row>
             <ion-col>
@@ -21,10 +21,10 @@
                   <ion-label class="labelText">Nickname</ion-label>
                 </div>
                 <ion-item class="input-color">
-                  <ion-input class="text-input" placeholder="Enter your Nickname" type="text" required></ion-input>
+                  <ion-input class="text-input" placeholder="Enter your Nickname" type="text" formControlName="nickname" required [(ngModel)]="profile.nickname"></ion-input>
                 </ion-item>
                 <div id="display-btn">
-                  <button ion-button id="apply-btn">APPLY</button>
+                  <button ion-button id="apply-btn" (click)="changeNickname()" [disabled]="!settingForm.form.valid">APPLY</button>
                 </div>
               </ion-list>
             </ion-col>

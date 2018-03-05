@@ -9,8 +9,8 @@
   <div id="profileBGcenter">
     <p class="profileBGtext">~ Welcome to B.O.S! ~</p>
     <ion-img id="userProfileImage" src="assets/imgs/ProfileImage/Muslim.png"></ion-img>
-    <p class="profileBGtext">Nickname</p>
-    
+    <p class="profileBGtext">{{(profileData | async)?.nickname || "Your Nickname Here"}}</p>
+
     <div>
         <ion-list-header id="settingHeader"><p>My Account</p></ion-list-header>
         <button ion-item regular>

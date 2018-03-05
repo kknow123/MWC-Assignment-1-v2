@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, App } from 'ionic-angular';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
+import { Profile } from '../../models/profile';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 /**
  * Generated class for the AccountPage page.
@@ -18,10 +21,21 @@ import { IonicPage, NavController, NavParams, LoadingController, App } from 'ion
 })
 export class AccountPage {
 
+  profileData: FirebaseObjectObservable<Profile>
+
   constructor(
+    private afAuth: AngularFireAuth,
+    private afDatabase: AngularFireDatabase,
     public app: App,
     public loadingCtrl: LoadingController,
     public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewWillLoad() {
+    this.afAuth.authState.subscribe(data => {
+      this.profileData = this.afDatabase.object(`profile/${data.uid}`)
+    })
+    
   }
 
   async logout() {
