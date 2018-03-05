@@ -6,35 +6,30 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Settings</ion-title>
+    <ion-title>SETTINGS</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <form autocomplete="off">
     <div class="center"> 
         <ion-row>
             <ion-col>
               <ion-list >
                 <div class="labelBoxColor">
-                  <ion-label class="labelText">Nickname*</ion-label>
+                  <ion-label class="labelText">Nickname</ion-label>
                 </div>
                 <ion-item class="input-color">
                   <ion-input class="text-input" placeholder="Enter your Nickname" type="text" required></ion-input>
                 </ion-item>
+                <div id="display-btn">
+                  <button ion-button id="apply-btn">APPLY</button>
+                </div>
               </ion-list>
             </ion-col>
-          </ion-row>
+        </ion-row>
     </div>
-    <div class="whiteLine"></div>
-    <ion-row>
-        <ion-col>
-          <div id="display-btn">
-              <button ion-button id="apply-btn">APPLY</button>
-          </div>
-        </ion-col>
-      </ion-row>
-    </form>
+  </form>
 </ion-content>
 

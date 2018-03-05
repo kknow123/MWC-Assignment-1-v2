@@ -1,3 +1,69 @@
 page-settings {
 
+    // Centralized Field
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 360px;
+        padding-top: 10px;
+    }
+
+    // Label Box Color
+    .labelBoxColor {
+        background-color: #E5EAFF;
+        height: 42px;
+        padding-top: 0.5%;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    // Label Text 
+    .labelText {
+        font-size: 19px;
+        font-weight: bold;
+        color: #787878;
+    }
+
+    // white line
+    .whiteLine {
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D4D4D4 #D4D4D4 #D4D4D4 #D4D4D4;
+    }
+
+    .text-input {
+        text-align: center;
+    }
+
+     // Placeholder text field color
+    .text-input::-moz-placeholder {
+        color: #D6D4D4;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color: #D6D4D4;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        color: #D6D4D4;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      #apply-btn {
+        background-color: #6363C9;
+        font-weight: bold;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
 }
