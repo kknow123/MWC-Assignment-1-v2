@@ -38,15 +38,17 @@ export class AccountPage {
     
   }
 
-  async logout() {
+  async logout(): Promise<any> {
     let loader = this.loadingCtrl.create({
     })
     loader.present();
     setTimeout(() => {
       loader.dismiss();
+      this.afAuth.auth.signOut();
       this.app.getRootNav().setRoot('LoginPage');
     }, 1000);
   }
+
 
   navigateToSettingPage() {
     this.navCtrl.push('SettingsPage');

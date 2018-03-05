@@ -40,9 +40,13 @@ export class SettingsPage {
   }
 
   changeNickname() {
+    let loader = this.loadingCtrl.create({
+    })
+    loader.present();
     this.afAuth.authState.subscribe(auth => {
       this.afDatabase.object(`profile/${auth.uid}`).set(this.profile)
         .then(() => this.navCtrl.setRoot('AccountPage'));
+        loader.dismiss();
     })
   }
 
