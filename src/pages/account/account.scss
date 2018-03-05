@@ -13,7 +13,7 @@ page-account {
     }
 
     #profileBGcolor {
-        background-color: #24244F;
+        background-color: #241F30;
         position: absolute;
         top: 1%;
         width: 100%;
@@ -39,10 +39,10 @@ page-account {
     #userProfileImage {
         width: 151px;
         height: 142px;
-        background-color: #24244F;
+        background-color: #241F30;
     }
 
-    #buttonCenter {
+    #settingHeader {
         padding-top: 3%;
         position: relative;
         display: block;
@@ -53,14 +53,7 @@ page-account {
         width: 100%;
     }
 
-    .buttonColorWhite {
-        background-color: #F0F4F5;
-        color: black;
-        font-weight: bold;
-    }
-
-    .buttonColorGrey {
-        background-color: #DBDBDB;
+    .textFont {
         color: black;
         font-weight: bold;
     }

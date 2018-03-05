@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Profile } from '../../models/profile'
+import { AngularFireDatabase } from 'angularfire2/database-deprecated'
+import { FormBuilder, FormGroup, Validators, AbstractControl } from "@angular/forms";
 
 /**
  * Generated class for the SettingsPage page.
@@ -17,11 +21,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SettingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  profile = {} as Profile;
+
+  formgroup:FormGroup;
+  nickname:AbstractControl;
+
+  constructor(public loadingCtrl: LoadingController,
+    public formbuilder: FormBuilder,
+    public alertCtrl: AlertController,
+    private afAuth: AngularFireAuth, private afDatabase: AngularFireDatabase,
+    public navCtrl: NavController, public navParams: NavParams) {
+
+      this.formgroup = formbuilder.group({
+        nickname:['',[Validators.required, Validators.minLength(6), Validators.maxLength(12)]]
+      });
+
+      this.nickname = this.formgroup.controls['nickname'];
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
+  changeNickname() {
+    let loader = this.loadingCtrl.create({
+    })
+    loader.present();
+    this.afAuth.authState.subscribe(auth => {
+      this.afDatabase.object(`profile/${auth.uid}`).set(this.profile)
+        .then(() => this.navCtrl.setRoot('AccountPage'));
+        loader.dismiss();
+    })
   }
 
 }

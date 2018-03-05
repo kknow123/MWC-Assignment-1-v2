@@ -9,34 +9,34 @@
   <div id="profileBGcenter">
     <p class="profileBGtext">~ Welcome to B.O.S! ~</p>
     <ion-img id="userProfileImage" src="assets/imgs/ProfileImage/Muslim.png"></ion-img>
-    <p class="profileBGtext">Nickname</p>
-    
-    <div id="buttonCenter">
-        <ion-list-header><p>My Account</p></ion-list-header>
-        <button ion-item regular color="dark">
+    <p class="profileBGtext">{{(profileData | async)?.nickname || "Your Nickname Here"}}</p>
+
+    <div>
+        <ion-list-header id="settingHeader"><p>My Account</p></ion-list-header>
+        <button ion-item regular>
             <ion-label>
-                <p>My Orders</p>
+                <p class="textFont">My Orders</p>
             </ion-label>  
-          <i item-left><ion-icon ios="ios-basket" md="md-basket"></ion-icon></i>
+          <i item-left ><ion-icon ios="ios-basket" md="md-basket"></ion-icon></i>
       </button>
 
-      <button ion-item regular color="dark" (click)="navigateToSettingPage()">
+      <button ion-item regular (click)="navigateToSettingPage()">
           <ion-label>
-              <p>Settings</p>
+              <p class="textFont">Settings</p>
           </ion-label>  
         <i item-left><ion-icon ios="ios-settings" md="md-settings"></ion-icon></i>
     </button>
 
-    <button ion-item regular color="dark">
+    <button ion-item regular>
         <ion-label>
-            <p>FAQ</p>
+            <p class="textFont">FAQ</p>
         </ion-label>  
       <i item-left><ion-icon ios="ios-chatboxes" md="md-chatboxes"></ion-icon></i>
   </button>
 
-  <button ion-item regular color="dark" (click)="logout()">
+  <button ion-item regular (click)="logout()">
       <ion-label>
-          <p>Logout</p>
+          <p class="textFont">Logout</p>
       </ion-label>  
     <i item-left><ion-icon ios="ios-log-out" md="md-log-out"></ion-icon></i>
 </button>

@@ -5,14 +5,31 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Settings</ion-title>
+    <ion-title>SETTINGS</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <form #settingForm="ngForm" [formGroup]="formgroup" autocomplete="off">
+    <div class="center"> 
+        <ion-row>
+            <ion-col>
+              <ion-list >
+                <div class="labelBoxColor">
+                  <ion-label class="labelText">Nickname</ion-label>
+                </div>
+                <ion-item class="input-color">
+                  <ion-input class="text-input" placeholder="Enter your Nickname" type="text" formControlName="nickname" required [(ngModel)]="profile.nickname"></ion-input>
+                </ion-item>
+                <div id="display-btn">
+                  <button ion-button id="apply-btn" (click)="changeNickname()" [disabled]="!settingForm.form.valid">APPLY</button>
+                </div>
+              </ion-list>
+            </ion-col>
+        </ion-row>
+    </div>
+  </form>
 </ion-content>
+
