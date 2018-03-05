@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController, AlertController
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Profile } from '../../models/profile'
 import { AngularFireDatabase } from 'angularfire2/database-deprecated'
-import { FormBuilder, FormGroup, Validators, AbstractControl, ValidatorFn } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators, AbstractControl } from "@angular/forms";
 
 /**
  * Generated class for the SettingsPage page.
