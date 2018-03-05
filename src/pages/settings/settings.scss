@@ -1,3 +1,68 @@
 page-settings {
+    // Body Content
+    #body {
+        background-color: #F7F8FF;
+        font-family: roboto;
+    }
 
+    // Centralized Field
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    // Label Box Color
+    .labelBoxColor {
+        background-color: #E5EAFF;
+        height: 42px;
+        padding-top: 3%;
+    }
+
+    // Label Text 
+    .labelText {
+        font-size: 14px;
+        color: #787878;
+        font-weight: bold;
+    }
+
+    // Placeholder text field color
+    .text-input::-moz-placeholder {
+        color: #D6D4D4;
+        font-weight: bold;
+      }
+      
+      .text-input:-ms-input-placeholder {
+        color: #D6D4D4;
+        font-weight: bold;
+      }
+      
+      .text-input::-webkit-input-placeholder {
+        color: #D6D4D4;
+        font-weight: bold;
+      }
+
+    // white line
+    .whiteLine {
+        position: absolute;
+        bottom: 15px;
+        width: 100%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #D4D4D4 #D4D4D4 #D4D4D4 #D4D4D4;
+    }
+
+    // all button
+    button {
+        width: 348px;
+    }
+
+    //apply button
+    #apply-btn {
+        background-color: #000000;
+        font-weight: bold;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
