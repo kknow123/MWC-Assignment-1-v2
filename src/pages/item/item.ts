@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ItemPage } from '../item/item';
+
 /**
- * Generated class for the CategoriesPage page.
+ * Generated class for the ItemPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,23 +10,16 @@ import { ItemPage } from '../item/item';
 
 @IonicPage()
 @Component({
-  selector: 'page-categories',
-  templateUrl: 'categories.html',
+  selector: 'page-item',
+  templateUrl: 'item.html',
 })
-export class CategoriesPage {
+export class ItemPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
   }
-  navigateToItemPage(){
-    this.navCtrl.push(ItemPage);
-  }
- 
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CategoriesPage');
+    console.log('ionViewDidLoad ItemPage');
   }
-
-  
 
 }

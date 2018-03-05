@@ -14,10 +14,72 @@
 
 
 <ion-content padding>
-  <div><img src=""></div>
-  <div><img src=""></div>
-  <div><img src=""></div>
-  <div><img src=""></div>
-  <div><img src=""></div>
-  <div><img src=""></div>
+ 
+  <ion-list>
+      <h2>Most Popular</h2> 
+    <ion-item class = "item-thumbnail-left">
+      
+      <img src ="http://lorempixel.com/90/90/"/>
+      <img src ="http://lorempixel.com/90/90/"/>
+      <img src ="http://lorempixel.com/90/90/"/>
+       
+      <p>Description</p></ion-item>
+      <button ion-item regular color="light" (click)="navigateToItemPage()">
+          <ion-label>
+              <p>View More</p>
+          </ion-label>  
+        <i item-left><ion-icon ios="ios-Item" md="md-Item"></ion-icon></i>
+      </button>
+
+      <h2>Trending</h2> 
+      <ion-item class = "item-thumbnail-left">
+          <img src ="http://lorempixel.com/90/90/"/>
+          <img src ="http://lorempixel.com/90/90/"/>
+          <img src ="http://lorempixel.com/90/90/"/>
+          
+          <p>Description</p></ion-item>
+          <button ion-item regular color="light" (click)="navigateToItemPage()">
+              <ion-label>
+                  <p>View More</p>
+              </ion-label>  
+            <i item-left><ion-icon ios="ios-Item" md="md-Item"></ion-icon></i>
+          </button>
+      
+
+      <h2>New</h2> 
+       <ion-item class = "item-thumbnail-left">
+      <img src ="http://lorempixel.com/90/90/"/>
+      <img src ="http://lorempixel.com/90/90/"/>
+      <img src ="http://lorempixel.com/90/90/"/>
+       
+      <p>Description</p></ion-item>
+      <button ion-item regular color="light" (click)="navigateToItemPage()">
+          <ion-label>
+              <p>View More</p>
+          </ion-label>  
+        <i item-left><ion-icon ios="ios-Item" md="md-Item"></ion-icon></i>
+      </button>
+  
+
+      <h2>Hot Selling</h2> 
+      <ion-item class = "item-thumbnail-left">
+     <img src ="http://lorempixel.com/90/90/"/>
+     <img src ="http://lorempixel.com/90/90/"/>
+     <img src ="http://lorempixel.com/90/90/"/>
+      
+     <p>Description</p></ion-item>
+     <button ion-item regular color="light" (click)="navigateToItemPage()">
+         <ion-label>
+             <p>View More</p>
+         </ion-label>  
+       <i item-left><ion-icon ios="ios-Item" md="md-Item"></ion-icon></i>
+     </button>
+
+          
+ 
+  </ion-list>
+
+
+  
+
 </ion-content>
