@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
+import { IonicPage, NavController, Slides } from 'ionic-angular';
+import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database-deprecated';
+import { ShoppingItem } from '../../models/shopping-item.interface';
 
 @IonicPage()
 @Component({
@@ -8,13 +10,17 @@ import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 })
 export class CategoriesPage {
 
+  shoppingListRef$: FirebaseListObservable<ShoppingItem[]>
+
   @ViewChild('SwipedTabsSlider') SwipedTabsSlider: Slides ;
 
   SwipedTabsIndicator :any= null;
   tabs:any=[];
 
  
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private database: AngularFireDatabase) {
+    this.shoppingListRef$ = this.database.list('shopping-list');
+
   	this.tabs=["Fashion","Computer","Book"];
   }
 

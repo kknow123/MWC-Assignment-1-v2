@@ -38,6 +38,10 @@ export class AccountPage {
     
   }
 
+  navigateToSellItemPage() {
+    this.navCtrl.push('SellItemPage');
+  }
+
   async logout(): Promise<any> {
     let loader = this.loadingCtrl.create({
     })
@@ -54,4 +58,5 @@ export class AccountPage {
     this.navCtrl.push('SettingsPage');
   }
 
+  
 }
